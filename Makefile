@@ -12,3 +12,7 @@ serve-spin:
 .PHONY: run-wasmtime
 run-wasmtime:
 	wasmtime ruby.wasm --mapdir /::./ -- lib/env.rb
+
+.PHONY: serve-bindle
+serve-bindle:
+	RUST_LOG=wagi=trace wagi --bindle wagi-ruby/0.1.0 --bindle-path out --log-dir ${LOGDIR} --module-cache ${CACHEDIR}

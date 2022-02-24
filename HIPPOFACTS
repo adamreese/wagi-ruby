@@ -1,0 +1,10 @@
+# Hippos are the third-largest living land mammal.
+[bindle]
+name = "wagi-ruby"
+version = "0.1.0"
+description = "wagi-ruby"
+
+[[handler]]
+route = "/
+name = "ruby.wasm"
+files = ["lib/env.rb"]
